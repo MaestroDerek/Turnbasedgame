@@ -18,6 +18,8 @@ public:
 	virtual void attack() = 0;
 
 	virtual void heal() = 0;
+
+	virtual unsigned int get_current_health() = 0;
 };
 
 #endif /* CHARACTER_H_ */

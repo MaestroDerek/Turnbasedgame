@@ -12,7 +12,7 @@
 
 class Priest: public Character {
 public:
-	Priest();
+	Priest(unsigned int health);
 
 	virtual ~Priest();
 
@@ -21,6 +21,12 @@ public:
 	void attack();
 
 	void heal();
+
+	unsigned int get_current_health();
+
+private:
+	unsigned int current_health;
+
 };
 
 #endif /* PRIEST_H_ */
