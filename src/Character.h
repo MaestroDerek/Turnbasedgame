@@ -1,5 +1,5 @@
 /*
- * character.h
+ * Character.h
  *
  *  Created on: Jul 6, 2016
  *      Author: gledford
@@ -8,10 +8,10 @@
 #ifndef CHARACTER_H_
 #define CHARACTER_H_
 
-class character
+class Character
 {
 public:
-	virtual ~character() {}
+	virtual ~Character() {}
 
 	virtual void power_up() = 0;
 
