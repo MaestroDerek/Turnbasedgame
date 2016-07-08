@@ -8,9 +8,11 @@
 #ifndef TURNBASEDGAME_SRC_WARRIOR_H_
 #define TURNBASEDGAME_SRC_WARRIOR_H_
 
-class Priest: public Character {
+#include "Character.h"
+
+class Warrior: public Character {
 public:
-	Priest(unsigned int health);
+	Warrior(unsigned int health);
 
 	virtual ~Warrior();
 
@@ -21,6 +23,8 @@ public:
 	void heal();
 
 	unsigned int get_current_health();
+
+	void take_damage(unsigned int damage);
 
 private:
 	unsigned int current_health;

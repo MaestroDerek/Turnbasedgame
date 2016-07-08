@@ -15,11 +15,13 @@ public:
 
 	virtual void power_up() = 0;
 
-	virtual void attack() = 0;
+	virtual void attack(Character &enemy) = 0;
 
 	virtual void heal() = 0;
 
 	virtual unsigned int get_current_health() = 0;
+
+	virtual void take_damage(unsigned int damage) = 0;
 };
 
 #endif /* CHARACTER_H_ */

@@ -18,14 +18,18 @@ public:
 
 	void power_up();
 
-	void attack();
+	void attack(Character &enemy);
 
 	void heal();
 
 	unsigned int get_current_health();
 
+	void take_damage(unsigned int damage);
+
 private:
 	unsigned int current_health;
+
+	unsigned int current_attack_power;
 
 };
 

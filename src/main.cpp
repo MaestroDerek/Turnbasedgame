@@ -10,12 +10,8 @@
 
 int main()
 {
-  std::cout << "Begin Game" << std::endl;
-
   GameEngine game_engine;
   game_engine.start_game();
-
-  std::cout << "End Game" << std::endl;
 
   return 0;
 }

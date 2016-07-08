@@ -26,3 +26,7 @@ void Warrior::heal() {
 unsigned int Warrior::get_current_health() {
 	return current_health;
 }
+
+void Warrior::take_damage(unsigned int damage) {
+	//TODO
+}

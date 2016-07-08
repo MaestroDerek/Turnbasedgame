@@ -23,13 +23,27 @@ GameEngine::~GameEngine() {
 }
 
 void GameEngine::start_game() {
-	std::cout << "Choose your character (default = Priest)" << std::endl;
-
 	bot = new Priest(20);
 	player = new Priest(20);
 
-	while(bot->get_current_health() != 0 || player->get_current_health() != 0) {
-		prompt_decision();
+	while(true) {
+		if (bot->get_current_health() > 0 && player->get_current_health() > 0)
+		{
+			prompt_decision();
+		}
+		else
+		{
+			if (bot->get_current_health() <= 0)
+			{
+				std::cout << "You win!!" << std::endl;
+			}
+			else
+			{
+				std::cout << "You lose!!" << std::endl;
+			}
+
+			break;
+		}
 	}
 }
 
@@ -54,7 +68,7 @@ void GameEngine::prompt_decision() {
 		player->heal();
 		break;
 	case 2:
-		player->attack();
+		player->attack(*bot);
 		break;
 	default:
 		break;
