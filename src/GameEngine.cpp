@@ -9,6 +9,7 @@
 #include "GameEngine.h"
 #include "Character.h"
 #include "Priest.h"
+#include "Warrior.h"
 
 GameEngine::GameEngine() : player(0), bot(0) {
 }
