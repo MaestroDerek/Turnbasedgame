@@ -24,6 +24,8 @@ private:
 
 	void choose_character();
 
+	void choose_enemy();
+
 	Character *player;
 	Character *bot;
 };

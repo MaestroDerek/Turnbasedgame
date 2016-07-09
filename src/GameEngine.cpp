@@ -10,6 +10,7 @@
 #include "Character.h"
 #include "Priest.h"
 #include "Warrior.h"
+#include "Necromancer.h"
 
 GameEngine::GameEngine() : player(0), bot(0) {
 }
@@ -24,7 +25,8 @@ GameEngine::~GameEngine() {
 
 void GameEngine::start_game() {
 	bool is_player_turn = true;
-	bot = new Priest(20);
+
+	choose_enemy();
 
 	choose_character();
 
@@ -110,4 +112,23 @@ void GameEngine::choose_character() {
 	default:
 		break;
 	}
+}
+
+void GameEngine::choose_enemy() {
+	unsigned int enemy_choice=0;
+
+	std::cout << "Choose your enemy. Default = Necromancer" << std::endl;
+	std::cout << "0 - Necromancer" << std::endl;
+
+	std::cin >> enemy_choice;
+
+	switch (enemy_choice) {
+	case 0:
+		bot = new Necromancer(20);
+		std::cout << "A Necromancer approaches. \n" << std::endl;
+		break;
+	default:
+		break;
+	}
+
 }
