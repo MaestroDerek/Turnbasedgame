@@ -22,6 +22,8 @@ private:
 
 	void prompt_decision(bool is_player_turn);
 
+	void choose_character();
+
 	Character *player;
 	Character *bot;
 };

@@ -25,7 +25,8 @@ GameEngine::~GameEngine() {
 void GameEngine::start_game() {
 	bool is_player_turn = true;
 	bot = new Priest(20);
-	player = new Warrior(20);
+
+	choose_character();
 
 	while(true) {
 		if (bot->get_current_health() > 0 && player->get_current_health() > 0)
@@ -86,4 +87,27 @@ void GameEngine::prompt_decision(bool is_player_turn) {
 		}
 	}
 
+}
+
+void GameEngine::choose_character() {
+	unsigned int character_choice=0;
+
+	std::cout << "Choose your character. Default = Priest" << std::endl;
+	std::cout << "0 - Priest" << std::endl;
+	std::cout << "1 - Warrior" << std::endl;
+
+	std::cin >> character_choice;
+
+	switch (character_choice) {
+	case 0:
+		player = new Priest(20);
+		std::cout << "You've selected Priest. \n" << std::endl;
+		break;
+	case 1:
+		player = new Warrior(20);
+		std::cout << "You've selected Warrior. \n" << std::endl;
+		break;
+	default:
+		break;
+	}
 }
