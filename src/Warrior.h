@@ -22,12 +22,12 @@ public:
 
 	void heal();
 
-	unsigned int get_current_health();
+	int get_current_health();
 
 	void take_damage(unsigned int damage);
 
 private:
-	unsigned int current_health;
+	int current_health;
 
 };
 

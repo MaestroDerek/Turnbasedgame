@@ -20,10 +20,10 @@ void Warrior::attack() {
 }
 
 void Warrior::heal() {
-	current_health+=2;
+	current_health+=1;
 }
 
-unsigned int Warrior::get_current_health() {
+int Warrior::get_current_health() {
 	return current_health;
 }
 

@@ -25,7 +25,7 @@ void Priest::heal() {
 	current_health+=2;
 }
 
-unsigned int Priest::get_current_health() {
+int Priest::get_current_health() {
 	return current_health;
 }
 

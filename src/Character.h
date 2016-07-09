@@ -19,7 +19,7 @@ public:
 
 	virtual void heal() = 0;
 
-	virtual unsigned int get_current_health() = 0;
+	virtual int get_current_health() = 0;
 
 	virtual void take_damage(unsigned int damage) = 0;
 };

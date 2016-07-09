@@ -20,7 +20,7 @@ public:
 
 private:
 
-	void prompt_decision();
+	void prompt_decision(bool is_player_turn);
 
 	Character *player;
 	Character *bot;
