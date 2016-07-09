@@ -79,10 +79,10 @@ void GameEngine::prompt_decision(bool is_player_turn) {
 		}
 	} else {
 		if (bot->get_current_health() > 10) {
-			std::cout << "You were hit" << std::endl;
+			std::cout << "You were hit \n" << std::endl;
 			bot->attack(*player);
 		} else {
-			std::cout << "Enemy healed" << std::endl;
+			std::cout << "Enemy healed \n" << std::endl;
 			bot->heal();
 		}
 	}
