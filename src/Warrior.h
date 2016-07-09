@@ -18,7 +18,7 @@ public:
 
 	void power_up();
 
-	void attack();
+	void attack(Character &enemy);
 
 	void heal();
 
@@ -29,6 +29,7 @@ public:
 private:
 	int current_health;
 
+	unsigned int current_attack_power;
 };
 
 #endif /* WARRIOR_H_ */

@@ -7,16 +7,18 @@
 
 #include "Warrior.h"
 
-Warrior::Warrior(unsigned int health) : current_health(health) {
+Warrior::Warrior(unsigned int health) : current_health(health), current_attack_power(2) {
 }
 
 Warrior::~Warrior() {
 }
 
 void Warrior::power_up() {
+	current_attack_power+=1;
 }
 
-void Warrior::attack() {
+void Warrior::attack(Character &enemy) {
+	enemy.take_damage(current_attack_power);
 }
 
 void Warrior::heal() {
@@ -28,5 +30,5 @@ int Warrior::get_current_health() {
 }
 
 void Warrior::take_damage(unsigned int damage) {
-	//TODO
+	current_health-= damage;
 }

@@ -25,7 +25,7 @@ GameEngine::~GameEngine() {
 void GameEngine::start_game() {
 	bool is_player_turn = true;
 	bot = new Priest(20);
-	player = new Priest(20);
+	player = new Warrior(20);
 
 	while(true) {
 		if (bot->get_current_health() > 0 && player->get_current_health() > 0)
