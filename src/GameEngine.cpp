@@ -6,11 +6,13 @@
  */
 
 #include <iostream>
+#include <cstdlib>
 #include "GameEngine.h"
 #include "Character.h"
 #include "Priest.h"
 #include "Warrior.h"
 #include "Necromancer.h"
+
 
 GameEngine::GameEngine() : player(0), bot(0) {
 }
@@ -81,11 +83,10 @@ void GameEngine::prompt_decision(bool is_player_turn) {
 		}
 	} else {
 		if (bot->get_current_health() > 10) {
-			std::cout << "You were hit \n" << std::endl;
-			bot->attack(*player);
+			bot->power_up(); //Make this random later
 		} else {
 			std::cout << "Enemy healed \n" << std::endl;
-			bot->heal();
+			bot->attack(*player);
 		}
 	}
 

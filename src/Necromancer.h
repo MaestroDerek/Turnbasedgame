@@ -30,5 +30,8 @@ private:
 
 	unsigned int current_attack_power;
 
+	unsigned int tomes [3];
+
+	unsigned int counter;
 };
 #endif /* SRC_NECROMANCER_H_ */
