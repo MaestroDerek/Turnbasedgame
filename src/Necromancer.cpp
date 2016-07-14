@@ -14,7 +14,7 @@ Necromancer::~Necromancer() {
 }
 
 void Necromancer::power_up() {
-	current_attack_power+=2;
+	current_attack_power+=4;
 	current_health-=1;
 }
 
